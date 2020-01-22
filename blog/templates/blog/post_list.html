@@ -6,7 +6,7 @@
         <tbody>
         {% for post in post_list %}
             <tr>
-                <td><a href="{% url "post_detail" post.pk %}">{{ post.title }}</a></td>
+                <td><a href="{% url "blog:post_detail" post.pk %}">{{ post.title }}</a></td>
             </tr>
         {% endfor %}
         </tbody>
