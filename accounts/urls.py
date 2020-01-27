@@ -11,6 +11,9 @@ urlpatterns=[
          views.MyPasswordChangeView.as_view(),
          # mypasswordchangeview 재정의 함
          name='password_change'),
+    path('password_reset/', views.MyPasswordResetView.as_view(), name='password_reset'),
+    path('reset/<uid64>/<token>/', views.MyPasswordResetConfirmView.as_view(), name='password_reset'),
+
 ]
 '''  # success_url을 대체함  
     path('password_change/done/',
